@@ -9,9 +9,9 @@
     <ImageView
         android:id="@+id/detalhes_filmes_iv_cartaz_filme"
         android:layout_width="0dp"
-        android:layout_height="320dp"
+        android:layout_height="400dp"
         android:contentDescription="@string/cartaz_do_filme"
-        android:scaleType="centerCrop"
+        android:scaleType="fitXY"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -20,7 +20,8 @@
     <ImageButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_margin="20dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="40dp"
         android:background="@drawable/round_button"
         android:contentDescription="@string/botao_voltar"
         android:cropToPadding="true"
@@ -75,39 +76,16 @@
         app:layout_constraintTop_toTopOf="@id/detalhes_filmes_iv_likes"
         tools:text="1.2 Likes" />
 
-    <ImageView
-        android:id="@+id/detalhes_filmes_iv_views"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="25dp"
-        android:contentDescription="@string/icone_em_forma_de_circulo"
-        android:scaleType="centerCrop"
-        android:src="@drawable/ic_view_circle_outlined"
-        app:layout_constraintBottom_toBottomOf="@id/detalhes_filmes_iv_likes"
-        app:layout_constraintStart_toEndOf="@id/detalhes_filmes_tv_likes"
-        app:layout_constraintTop_toTopOf="@id/detalhes_filmes_iv_likes"
-        app:tint="@color/white" />
-
-    <TextView
-        android:id="@+id/detalhes_filmes_tv_views"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="4dp"
-        android:textColor="@color/white"
-        android:textSize="18sp"
-        app:layout_constraintBottom_toBottomOf="@id/detalhes_filmes_tv_likes"
-        app:layout_constraintStart_toEndOf="@id/detalhes_filmes_iv_views"
-        app:layout_constraintTop_toTopOf="@id/detalhes_filmes_tv_likes"
-        tools:text="3 of 10 Watched" />
 
     <TextView
         android:id="@+id/detalhes_filmes_tv_filmes_relacionados"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
         android:layout_marginTop="8dp"
         android:text="@string/filmes_relacionados"
         android:textColor="@color/white"
-        app:layout_constraintStart_toStartOf="@id/detalhes_filmes_iv_likes"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/detalhes_filmes_iv_likes" />
 
     <androidx.recyclerview.widget.RecyclerView
@@ -115,6 +93,7 @@
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:padding="5dp"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

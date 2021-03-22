@@ -4,6 +4,7 @@ import java.util.*
 
 data class Movie(
     var id: Int,
+    var genres: List<Genre>?,
     var video: Boolean?,
     var vote_average: Double?,
     var popularity: Double?,
