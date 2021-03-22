@@ -37,9 +37,9 @@ class DetalhesFilmeFragment : Fragment() {
     private val BASE_URL_IMG = "https://image.tmdb.org/t/p/w780"
 
     override fun onCreateView(
-        inflater: LayoutInflater,
-        container: ViewGroup?,
-        savedInstanceState: Bundle?
+            inflater: LayoutInflater,
+            container: ViewGroup?,
+            savedInstanceState: Bundle?
     ): View {
         _binding = FragmentDetalhesFilmeBinding.inflate(inflater, container, false)
         val view = binding.root
@@ -73,13 +73,15 @@ class DetalhesFilmeFragment : Fragment() {
                 binding.detalhesFilmesTvLikes.text = "${it.vote_count.toString()} Likes"
 
                 val options: RequestOptions = RequestOptions()
-                    .placeholder(R.mipmap.ic_launcher_round)
-                    .error(R.mipmap.ic_launcher_round)
+                        .placeholder(R.mipmap.ic_launcher_round)
+                        .error(R.mipmap.ic_launcher_round)
                 Glide
-                    .with(this)
-                    .load(BASE_URL_IMG + "${it.poster_path}")
-                    .apply(options)
-                    .into(binding.detalhesFilmesIvCartazFilme)
+                        .with(this)
+                        .load(BASE_URL_IMG + "${it.poster_path}")
+                        .apply(options)
+                        .into(binding.detalhesFilmesIvCartazFilme)
+
+                binding.detalhesFilmesTvPopularity.text = it.popularity.toString()
             }
 
         }

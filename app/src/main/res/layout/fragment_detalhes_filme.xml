@@ -76,6 +76,32 @@
         app:layout_constraintTop_toTopOf="@id/detalhes_filmes_iv_likes"
         tools:text="1.2 Likes" />
 
+    <ImageView
+        android:id="@+id/detalhes_filmes_iv_popularity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:contentDescription="@string/icone_em_forma_de_coracao"
+        android:scaleType="centerCrop"
+        android:src="@drawable/ic_popularity"
+        app:layout_constraintBottom_toBottomOf="@id/detalhes_filmes_iv_likes"
+        app:layout_constraintStart_toEndOf="@id/detalhes_filmes_tv_likes"
+        app:layout_constraintTop_toTopOf="@id/detalhes_filmes_iv_likes"
+        app:tint="@color/white" />
+
+
+    <TextView
+        android:id="@+id/detalhes_filmes_tv_popularity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@id/detalhes_filmes_iv_popularity"
+        app:layout_constraintStart_toEndOf="@id/detalhes_filmes_iv_popularity"
+        app:layout_constraintTop_toTopOf="@id/detalhes_filmes_iv_popularity"
+        tools:text="7.2" />
+
 
     <TextView
         android:id="@+id/detalhes_filmes_tv_filmes_relacionados"
